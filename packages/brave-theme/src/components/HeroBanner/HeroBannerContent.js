@@ -55,6 +55,8 @@ function HeroBannerContent(props) {
           return <FeaturedText>{item.content}</FeaturedText>;
         case "button":
           return <PrimaryButton title={item.content} />;
+        default:
+          return <p>{item.content}</p>;
       }
     });
   }
