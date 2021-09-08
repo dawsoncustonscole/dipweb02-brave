@@ -7,27 +7,16 @@ function ProblemStatement(props) {
   const parsedHeadline = headline.children[0].children[0].content;
   const parsedContent = [];
 
-  function getComponents(item) {
-    switch (item.component) {
-      case "h5":
-        parsedContent.push({
-          component: "h5",
-          content: item.children[0].content,
-        });
-        break;
-      case "p":
-        parsedContent.push({
-          component: "p",
-          content: item.children[0].content,
-        });
-        break;
-    }
-    console.log(parsedContent);
+  function parseComponents(item) {
+    parsedContent.push({
+      component: item.component,
+      content: item.children[0].content,
+    });
   }
 
   return (
     <>
-      {content.children.map(getComponents)}
+      {content.children.map(parseComponents)}
       <Layout headline={parsedHeadline} content={parsedContent} />
     </>
   );
