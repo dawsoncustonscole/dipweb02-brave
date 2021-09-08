@@ -1,8 +1,8 @@
-import { styled } from "frontity";
 import React from "react";
 import BackgroundImage from "./BackgroundImage";
 import HeroBannerContent from "./HeroBannerContent";
 import Overlay from "./Overlay";
+import { styled } from "frontity";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -13,7 +13,7 @@ function HeroBannerLayout(props) {
   const { backgroundImageSrc, content } = props;
 
   return (
-    <StyledDiv class="hero-banner_layout">
+    <StyledDiv className="hero-banner_layout">
       <Overlay />
       <BackgroundImage backgroundImageSrc={backgroundImageSrc} />
       <HeroBannerContent content={content} />
