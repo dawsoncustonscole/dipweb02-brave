@@ -1,11 +1,12 @@
 import React from "react";
 import { styled } from "frontity";
-import { FeaturedText, H1 } from "../../Typography/Font";
+import { FeaturedText, H1 } from "../../Styles/Font";
+import PrimaryButton from "../Buttons/PrimaryButton";
 
 const StyledDiv = styled.div`
   position: absolute;
   z-index: 300;
-  bottom: 10vh;
+  bottom: 12.5vh;
   width: 50vw;
   left: 10vw;
 
@@ -30,7 +31,7 @@ function HeroBannerContent(props) {
         case "p":
           return <FeaturedText>{item.content}</FeaturedText>;
         case "button":
-          return <button>{item.content}</button>;
+          return <PrimaryButton title={item.content} />;
       }
     });
   }
