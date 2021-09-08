@@ -10,6 +10,19 @@ export const H1 = styled.h1`
   }
 `;
 
+export const H3 = styled.h3`
+  font-size: 2rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 150%;
+`;
+
+export const H5 = styled.h5`
+  font-size: 1.5rem;
+  margin: 0;
+  font-weight: 600;
+`;
+
 export const FeaturedText = styled.p`
   font-size: 1.5rem;
   line-height: 150%;
@@ -29,4 +42,10 @@ export const BrandH4 = styled.h4`
 export const NavLinkP = styled.p`
   font-size: 1.125rem;
   margin: 0;
+`;
+
+export const P = styled.p`
+  font-size: 1.313rem;
+  margin: 0, 1.5rem;
+  line-height: 150%;
 `;

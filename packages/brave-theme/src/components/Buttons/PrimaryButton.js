@@ -12,9 +12,9 @@ const StyledButton = styled.button`
 `;
 
 function PrimaryButton(props) {
-  const { title, onClick } = props;
+  const { title, onClick = "/" } = props;
   return (
-    <Link>
+    <Link link={onClick}>
       <StyledButton>{title}</StyledButton>
     </Link>
   );

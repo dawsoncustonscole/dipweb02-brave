@@ -46,14 +46,14 @@ function HeroBannerContent(props) {
   const { content } = props;
 
   function renderContent() {
-    return content.map((item) => {
+    return content.map((item, index) => {
       switch (item.component) {
         case "h1":
-          return <H1>{item.content}</H1>;
+          return <H1 key={index}>{item.content}</H1>;
         case "p":
-          return <FeaturedText>{item.content}</FeaturedText>;
+          return <FeaturedText key={index}>{item.content}</FeaturedText>;
         case "button":
-          return <PrimaryButton title={item.content} />;
+          return <PrimaryButton key={index} title={item.content} />;
         default:
           return <p>{item.content}</p>;
       }

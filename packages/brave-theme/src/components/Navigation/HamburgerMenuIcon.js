@@ -19,7 +19,7 @@ const StyledDiv = styled.div`
 function HamburgerMenuIcon() {
   return (
     <StyledDiv>
-      <FontAwesomeIcon icon={faBars} size="xl" />
+      <FontAwesomeIcon icon={faBars} size="lg" />
     </StyledDiv>
   );
 }
