@@ -1,5 +1,5 @@
 import React from "react";
-import { connect } from "frontity";
+import { connect, css, Global } from "frontity";
 import Switch from "@frontity/components/switch";
 import HomeScreen from "../screens/HomeScreen";
 
@@ -10,6 +10,15 @@ function Root(props) {
 
   return (
     <>
+      <Global
+        styles={css`
+          html {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+              Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue",
+              sans-serif;
+          }
+        `}
+      />
       <main>
         <Switch>
           <HomeScreen when={data.isHome} />
