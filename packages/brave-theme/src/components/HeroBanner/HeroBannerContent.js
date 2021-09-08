@@ -7,16 +7,39 @@ const StyledDiv = styled.div`
   position: absolute;
   z-index: 300;
   bottom: 12.5vh;
-  width: 50vw;
   left: 10vw;
 
-  H1,
+  H1 {
+    color: white;
+    width: 12ch;
+  }
   p {
     color: white;
+    width: 30ch;
   }
 
-  p {
-    width: 33vw;
+  @media (max-width: 768px) {
+    left: 5vw;
+  }
+
+  @media (max-width: 425px) {
+    bottom: 10vh;
+    H1 {
+      width: 10ch;
+    }
+    p {
+      width: 20ch;
+    }
+  }
+
+  @media (max-width: 320px) {
+    bottom: 10vh;
+    H1 {
+      width: 8ch;
+    }
+    p {
+      width: 20ch;
+    }
   }
 `;
 

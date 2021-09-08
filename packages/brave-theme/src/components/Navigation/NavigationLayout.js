@@ -13,21 +13,25 @@ const StyledDiv = styled.div`
   justify-content: center;
 `;
 
+const StyledContainer = styled.div`
+  width: 80vw;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 12.5vh;
+
+  @media (max-width: 768px) {
+    width: 90vw;
+  }
+`;
+
 function NavigationLayout() {
   return (
     <StyledDiv>
-      <div
-        style={{
-          width: "80vw",
-          display: "flex",
-          justifyContent: "space-between",
-          alignItems: "center",
-          height: "12.5vh",
-        }}
-      >
+      <StyledContainer>
         <Brand />
         <PrimaryNavLinks />
-      </div>
+      </StyledContainer>
     </StyledDiv>
   );
 }
