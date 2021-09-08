@@ -10,7 +10,6 @@ function HeroBannerLayout(props) {
     <>
       <Overlay />
       <BackgroundImage backgroundImageSrc={backgroundImageSrc} />
-
       <HeroBannerContent content={content} />
     </>
   );
