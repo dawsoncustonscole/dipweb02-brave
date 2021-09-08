@@ -6,7 +6,7 @@ import PrimaryButton from "../Buttons/PrimaryButton";
 const StyledDiv = styled.div`
   position: absolute;
   z-index: 300;
-  bottom: 12.5vh;
+  bottom: 6rem;
   left: 10vw;
 
   H1 {
@@ -23,7 +23,7 @@ const StyledDiv = styled.div`
   }
 
   @media (max-width: 425px) {
-    bottom: 10vh;
+    bottom: 5rem;
     H1 {
       width: 10ch;
     }
@@ -33,7 +33,6 @@ const StyledDiv = styled.div`
   }
 
   @media (max-width: 320px) {
-    bottom: 10vh;
     H1 {
       width: 8ch;
     }

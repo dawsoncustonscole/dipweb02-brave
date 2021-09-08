@@ -14,7 +14,8 @@ const StyledDiv = styled.div`
     min-width: 100%;
     height: 100%;
     transform: scale(2);
-    object-position: 200px -140px;
+    object-position: 200px -160px;
+    object-fit: cover;
   }
 `;
 
