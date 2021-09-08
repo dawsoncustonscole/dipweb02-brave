@@ -1,4 +1,5 @@
 import Root from "./components";
+import heroBanner from "./processors/heroBanner";
 
 const braveTheme = {
   name: "brave-theme",
@@ -10,6 +11,11 @@ const braveTheme = {
   },
   actions: {
     theme: {},
+  },
+  libraries: {
+    html2react: {
+      processors: [heroBanner],
+    },
   },
 };
 
