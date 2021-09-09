@@ -10,6 +10,11 @@ export const H1 = styled.h1`
   }
 `;
 
+export const H2 = styled.h2`
+  font-size: 3rem;
+  margin: 0;
+`;
+
 export const H3 = styled.h3`
   font-size: 2rem;
   margin: 0;
@@ -21,6 +26,12 @@ export const H5 = styled.h5`
   font-size: 1.5rem;
   margin: 0;
   font-weight: 600;
+`;
+
+export const H6 = styled.h6`
+  font-size: 1.313rem;
+  font-weight: 600;
+  margin: 0;
 `;
 
 export const FeaturedText = styled.p`

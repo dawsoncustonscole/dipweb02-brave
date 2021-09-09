@@ -55,7 +55,7 @@ function HeroBannerContent(props) {
         case "button":
           return <PrimaryButton key={index} title={item.content} />;
         default:
-          return <p>{item.content}</p>;
+          return <p key={index}>{item.content}</p>;
       }
     });
   }

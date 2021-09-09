@@ -45,7 +45,7 @@ function renderContent(item) {
   }
 }
 
-function Layout(props) {
+function ProblemStatementLayout(props) {
   const { headline, content } = props;
   return (
     <StyledWrapper>
@@ -70,4 +70,4 @@ function Layout(props) {
   );
 }
 
-export default Layout;
+export default ProblemStatementLayout;

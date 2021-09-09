@@ -1,5 +1,5 @@
 import React from "react";
-import Layout from "./Layout";
+import ProblemStatementLayout from "./ProblemStatementLayout";
 
 function ProblemStatement(props) {
   const { headline, content } = props;
@@ -7,18 +7,18 @@ function ProblemStatement(props) {
   const parsedHeadline = headline.children[0].children[0].content;
   const parsedContent = [];
 
-  function parseComponents(item) {
+  function parseComponents(item, index) {
     parsedContent.push({
       component: item.component,
       content: item.children[0].content,
+      key: index,
     });
   }
 
+  content.children.map(parseComponents);
+
   return (
-    <>
-      {content.children.map(parseComponents)}
-      <Layout headline={parsedHeadline} content={parsedContent} />
-    </>
+    <ProblemStatementLayout headline={parsedHeadline} content={parsedContent} />
   );
 }
 
