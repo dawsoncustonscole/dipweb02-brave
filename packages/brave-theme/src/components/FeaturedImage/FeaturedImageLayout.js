@@ -14,9 +14,16 @@ const StyledContainer = styled.div`
   width: 80vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
+  gap: 4rem;
 
   @media (max-width: 768px) {
     width: 90vw;
+  }
+
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column-reverse;
+    margin: 4rem 0;
   }
 `;
 
@@ -35,7 +42,7 @@ function FeaturedImageLayout(props) {
   return (
     <StyledWrapper>
       <StyledContainer>
-        <div style={{ paddingRight: "4rem" }}>
+        <div>
           <div
             style={{
               height: "0.5rem",
@@ -46,13 +53,14 @@ function FeaturedImageLayout(props) {
           ></div>
           {content.map(renderContent)}
         </div>
-        <div style={{ marginBottom: "3rem" }}>
+        <div>
           <figure
             style={{
               margin: 0,
               borderRadius: "0.5rem",
               overflow: "hidden",
               height: "100%",
+              maxHeight: "60vh",
             }}
           >
             <img

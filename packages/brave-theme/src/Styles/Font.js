@@ -24,6 +24,10 @@ export const H3 = styled.h3`
   margin: 0;
   font-weight: 600;
   line-height: 150%;
+
+  @media (max-width: 768px) {
+    font-size: 2rem;
+  }
 `;
 
 export const H4 = styled.h4`
