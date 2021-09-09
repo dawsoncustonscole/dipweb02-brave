@@ -16,6 +16,13 @@ export const H2 = styled.h2`
 `;
 
 export const H3 = styled.h3`
+  font-size: 2.5rem;
+  margin: 0;
+  font-weight: 600;
+  line-height: 150%;
+`;
+
+export const H4 = styled.h4`
   font-size: 2rem;
   margin: 0;
   font-weight: 600;
