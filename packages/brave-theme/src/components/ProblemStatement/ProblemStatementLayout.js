@@ -1,6 +1,6 @@
 import { styled } from "frontity";
 import React from "react";
-import { H3, H5, P } from "../../Styles/Font";
+import { H4, H5, P } from "../../Styles/Font";
 
 const StyledDiv = styled.div`
   display: grid;
@@ -60,7 +60,7 @@ function ProblemStatementLayout(props) {
                 marginBottom: "2rem",
               }}
             ></div>
-            <H3>{headline}</H3>
+            <H4>{headline}</H4>
           </div>
 
           <div>{content.map(renderContent)}</div>
