@@ -1,4 +1,5 @@
 import Root from "./components";
+import featuredImage from "./processors/featuredImage";
 import heroBanner from "./processors/heroBanner";
 import ourTools from "./processors/ourTools";
 import problemStatement from "./processors/problemStatement";
@@ -16,7 +17,7 @@ const braveTheme = {
   },
   libraries: {
     html2react: {
-      processors: [heroBanner, problemStatement, ourTools],
+      processors: [heroBanner, problemStatement, ourTools, featuredImage],
     },
   },
 };
