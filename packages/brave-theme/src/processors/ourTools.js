@@ -3,7 +3,8 @@ import OurTools from "../components/OurTools/OurTools";
 const ourTools = {
   name: "our-tools",
   priority: 10,
-  test: ({ node }) => node.props.className.split(" ").includes("our-tools"),
+  test: ({ component, props }) =>
+    component === "div" && props.className === "wp-block-columns our-tools",
   processor: ({ node }) => {
     const [heading, subHeading, content] = node.children[0].children;
     return {

@@ -3,8 +3,9 @@ import ProblemStatement from "../components/ProblemStatement/ProblemStatement";
 const problemStatement = {
   name: "problem-statement",
   priority: 10,
-  test: ({ node }) =>
-    node.props.className.split(" ").includes("problem-statement"),
+  test: ({ component, props }) =>
+    component === "div" &&
+    props.className === "wp-block-columns problem-statement",
   processor: ({ node }) => {
     const [headline, content] = node.children;
 
