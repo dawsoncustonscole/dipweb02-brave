@@ -13,6 +13,10 @@ export const H1 = styled.h1`
 export const H2 = styled.h2`
   font-size: 3rem;
   margin: 0;
+
+  @media (max-width: 465px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const H3 = styled.h3`
@@ -64,6 +68,6 @@ export const NavLinkP = styled.p`
 
 export const P = styled.p`
   font-size: 1.313rem;
-  margin: 0, 1.5rem;
+  margin: 1.5rem 0;
   line-height: 150%;
 `;

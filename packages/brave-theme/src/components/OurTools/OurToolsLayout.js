@@ -17,7 +17,21 @@ const StyledContainer = styled.div`
   gap: 4rem;
 
   @media (max-width: 768px) {
+    margin: 4rem 0;
     width: 90vw;
+    gap: 2rem;
+  }
+`;
+
+const StyledDiv = styled.div`
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 5rem;
+
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 `;
 
@@ -25,6 +39,11 @@ const StyledGrid = styled.div`
   display: grid;
   grid-template-columns: 1fr 1fr 1fr;
   gap: 2rem;
+
+  @media (max-width: 425px) {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 function OurToolsLayout(props) {
@@ -73,14 +92,11 @@ function OurToolsLayout(props) {
   return (
     <StyledWrapper>
       <StyledContainer>
-        <div style={{ display: "flex" }}>
-          <div style={{ flex: 1 }}>
-            <H2>{heading}</H2>
-          </div>
-          <div style={{ flex: 1, margin: "-1rem" }}>
-            <P>{subHeading}</P>
-          </div>
-        </div>
+        <StyledDiv>
+          <H2>{heading}</H2>
+
+          <P style={{ marginTop: "0.5rem" }}>{subHeading}</P>
+        </StyledDiv>
 
         <StyledGrid>{content.map(renderContent)}</StyledGrid>
       </StyledContainer>
