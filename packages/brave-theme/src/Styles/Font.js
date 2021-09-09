@@ -8,13 +8,16 @@ export const H1 = styled.h1`
   @media (max-width: 768px) {
     font-size: 3rem;
   }
+  @media (max-width: 320px) {
+    font-size: 2.5rem;
+  }
 `;
 
 export const H2 = styled.h2`
   font-size: 3rem;
   margin: 0;
 
-  @media (max-width: 465px) {
+  @media (max-width: 425px) {
     font-size: 2.5rem;
   }
 `;

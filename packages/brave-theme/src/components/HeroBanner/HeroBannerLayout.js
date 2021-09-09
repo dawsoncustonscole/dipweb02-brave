@@ -5,8 +5,13 @@ import Overlay from "./Overlay";
 import { styled } from "frontity";
 
 const StyledDiv = styled.div`
+  position: relative;
   display: flex;
   height: 100vh;
+
+  @media (max-width: 375px) {
+    height: 110vh;
+  }
 `;
 
 function HeroBannerLayout(props) {

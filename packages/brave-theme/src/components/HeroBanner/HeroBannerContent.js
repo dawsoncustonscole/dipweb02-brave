@@ -33,9 +33,7 @@ const StyledDiv = styled.div`
   }
 
   @media (max-width: 320px) {
-    H1 {
-      width: 8ch;
-    }
+    bottom: 2.5rem;
     p {
       width: 20ch;
     }

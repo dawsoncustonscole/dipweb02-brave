@@ -3,17 +3,17 @@ import { styled } from "frontity";
 
 const StyledDiv = styled.div`
   position: absolute;
-  top: 0;
   right: 0;
+  top: 0;
   left: 0;
-  opacity: 0.2;
+  bottom: 0;
   background-color: black;
+  opacity: 0.3;
   z-index: 200;
-  height: 100vh;
 `;
 
 function Overlay() {
-  return <StyledDiv />;
+  return <StyledDiv></StyledDiv>;
 }
 
 export default Overlay;

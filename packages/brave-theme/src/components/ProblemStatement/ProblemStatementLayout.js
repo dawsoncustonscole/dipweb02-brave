@@ -63,7 +63,9 @@ function ProblemStatementLayout(props) {
             <H4>{headline}</H4>
           </div>
 
-          <div>{content.map(renderContent)}</div>
+          <div style={{ marginBottom: "-1.5rem" }}>
+            {content.map(renderContent)}
+          </div>
         </StyledDiv>
       </StyledContainer>
     </StyledWrapper>
