@@ -23,7 +23,7 @@ function BackgroundImage(props) {
   const { backgroundImageSrc } = props;
   return (
     <StyledDiv className="hero-banner_background-image">
-      <img src={backgroundImageSrc} />;
+      <img src={backgroundImageSrc} />
     </StyledDiv>
   );
 }
