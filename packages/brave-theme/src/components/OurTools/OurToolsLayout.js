@@ -31,7 +31,6 @@ function OurToolsLayout(props) {
   const { content, heading, subHeading } = props;
 
   function renderContent(item) {
-    console.log(item);
     return (
       <div>
         {item.map((item) => {
