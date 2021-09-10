@@ -7,7 +7,7 @@ const StyledDiv = styled.div`
   position: absolute;
   z-index: 300;
   bottom: 6rem;
-  left: 10vw;
+  left: 20vw;
 
   H1 {
     color: white;

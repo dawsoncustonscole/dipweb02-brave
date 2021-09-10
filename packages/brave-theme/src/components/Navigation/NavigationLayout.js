@@ -14,11 +14,15 @@ const StyledDiv = styled.div`
 `;
 
 const StyledContainer = styled.div`
-  width: 80vw;
+  width: 60vw;
   display: flex;
   justify-content: space-between;
   align-items: center;
   height: 12.5vh;
+
+  @media (max-width: 1024px) {
+    width: 80vw;
+  }
 
   @media (max-width: 768px) {
     width: 90vw;

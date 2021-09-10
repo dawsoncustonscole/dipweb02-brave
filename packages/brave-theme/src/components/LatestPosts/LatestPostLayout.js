@@ -11,7 +11,11 @@ const StyledWrapper = styled.div`
 
 const StyledContainer = styled.div`
   margin: 8rem 0;
-  width: 80vw;
+  width: 60vw;
+
+  @media (max-width: 1024px) {
+    width: 80vw;
+  }
 
   @media (max-width: 768px) {
     margin: 4rem 0;

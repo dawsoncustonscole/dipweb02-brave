@@ -11,10 +11,14 @@ const StyledWrapper = styled.div`
 
 const StyledContainer = styled.div`
   margin: 8rem 0;
-  width: 80vw;
+  width: 60vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 4rem;
+
+  @media (max-width: 1024px) {
+    width: 80vw;
+  }
 
   @media (max-width: 768px) {
     width: 90vw;

@@ -25,8 +25,12 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledContainer = styled.div`
-  width: 80vw;
+  width: 60vw;
   padding: 8rem 0;
+
+  @media (max-width: 1024px) {
+    width: 80vw;
+  }
 
   @media (max-width: 768px) {
     width: 90vw;
