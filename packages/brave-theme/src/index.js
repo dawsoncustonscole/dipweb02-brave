@@ -3,6 +3,7 @@ import featuredImage from "./processors/featuredImage";
 import heroBanner from "./processors/heroBanner";
 import ourTools from "./processors/ourTools";
 import problemStatement from "./processors/problemStatement";
+import { latestPosts, latestPostsHeader } from "./processors/latestPosts";
 
 const braveTheme = {
   name: "brave-theme",
@@ -17,7 +18,14 @@ const braveTheme = {
   },
   libraries: {
     html2react: {
-      processors: [heroBanner, problemStatement, ourTools, featuredImage],
+      processors: [
+        heroBanner,
+        problemStatement,
+        ourTools,
+        featuredImage,
+        latestPosts,
+        latestPostsHeader,
+      ],
     },
   },
 };

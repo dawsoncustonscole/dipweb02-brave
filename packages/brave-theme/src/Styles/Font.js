@@ -77,4 +77,12 @@ export const P = styled.p`
   font-size: 1.313rem;
   margin: 1.5rem 0;
   line-height: 150%;
+
+  @media (max-width: 425px) {
+    font-size: 1.125rem;
+  }
+`;
+
+export const P2 = styled(NavLinkP)`
+  line-height: 125%;
 `;

@@ -1,6 +1,8 @@
 import React from "react";
 import HeroBannerLayout from "./HeroBannerLayout";
 
+// TODO set parseContent = function parseContent()
+
 function HeroBanner(props) {
   const { backgroundImageSrc, content } = props;
 
