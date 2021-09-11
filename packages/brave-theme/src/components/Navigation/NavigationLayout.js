@@ -17,7 +17,7 @@ const StyledDiv = styled.div`
   transition: top 300ms ease, background-color 200ms ease;
 
   :hover {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.6);
   }
 `;
 
@@ -38,7 +38,7 @@ const StyledContainer = styled.div`
 `;
 
 function NavigationLayout(props) {
-  const { isHamburgerMenuOpen, toggleHamburgerMenu } = props;
+  const { isHamburgerMenuOpen, toggleHamburgerMenu, navigationItems } = props;
   const [navbarScroll, setNavbarScroll] = useState(false);
   const [navbarBackground, setNavbarBackground] = useState(false);
 
@@ -82,7 +82,10 @@ function NavigationLayout(props) {
       >
         <StyledContainer>
           <Brand />
-          <PrimaryNavLinks toggleHamburgerMenu={toggleHamburgerMenu} />
+          <PrimaryNavLinks
+            toggleHamburgerMenu={toggleHamburgerMenu}
+            navigationItems={navigationItems}
+          />
         </StyledContainer>
       </StyledDiv>
       {isHamburgerMenuOpen && (
