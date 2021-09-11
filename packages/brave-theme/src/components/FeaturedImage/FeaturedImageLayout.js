@@ -10,7 +10,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledContainer = styled.div`
-  margin: 8rem 0;
+  padding: 8rem 0;
   width: 60vw;
   display: grid;
   grid-template-columns: 1fr 1fr;
@@ -27,7 +27,8 @@ const StyledContainer = styled.div`
   @media (max-width: 425px) {
     display: flex;
     flex-direction: column-reverse;
-    margin: 4rem 0;
+    padding-bottom: 3rem;
+    padding-top: 5rem;
   }
 `;
 

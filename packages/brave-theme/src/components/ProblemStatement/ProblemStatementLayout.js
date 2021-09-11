@@ -36,6 +36,10 @@ const StyledContainer = styled.div`
     width: 90vw;
     padding: 5rem 0;
   }
+  @media (max-width: 425px) {
+    padding-top: 5rem;
+    padding-bottom: 3rem;
+  }
 `;
 
 function renderContent(item) {
