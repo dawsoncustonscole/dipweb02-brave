@@ -17,20 +17,20 @@ const settings = {
               ref: 1,
               name: "Tools",
               submenu: [
-                { name: "The brave app", href: "/tools/the-brave-app" },
-                { name: "ODetect sensors", href: "/tools/odetect-sensors" },
-                { name: "Brave buttons", href: "/tools/brave-buttons" },
+                { name: "The brave app", href: "/the-brave-app" },
+                { name: "ODetect sensors", href: "/odetect-sensors" },
+                { name: "Brave buttons", href: "/brave-buttons" },
               ],
             },
             {
               ref: 2,
               name: "About us",
               submenu: [
-                { name: "Team", href: "/about-us/team" },
-                { name: "Co-op life", href: "/about-us/coop-life" },
+                { name: "Team", href: "/team" },
+                { name: "Co-op life", href: "coop-life" },
                 {
                   name: "Privacy",
-                  href: "/about-us/privacy&anonymity",
+                  href: "privacy",
                 },
               ],
             },
@@ -40,11 +40,11 @@ const settings = {
               submenu: [
                 {
                   name: "Join Brave Co-op",
-                  href: "/get-involved/join-brave-coop",
+                  href: "join-brave-coop",
                 },
                 {
                   name: "Become a supporter",
-                  href: "/about-us/become-a-supporter",
+                  href: "become-a-supporter",
                 },
               ],
             },
@@ -54,19 +54,19 @@ const settings = {
               submenu: [
                 {
                   name: "Harm reduction",
-                  href: "/resources/harm-reduction",
+                  href: "harm-reduction",
                 },
                 {
                   name: "Awareness",
-                  href: "/resources/awareness",
+                  href: "awareness",
                 },
                 {
                   name: "Community",
-                  href: "/resources/brave-app-community",
+                  href: "brave-app-community",
                 },
                 {
                   name: "Brave blog",
-                  href: "/resources/brave-blog",
+                  href: "brave-blog",
                 },
               ],
             },

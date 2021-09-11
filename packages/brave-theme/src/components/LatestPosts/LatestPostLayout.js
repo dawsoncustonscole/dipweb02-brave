@@ -2,7 +2,6 @@ import { styled } from "frontity";
 import React from "react";
 import BlogPostListing from "./BlogPostListing";
 import LatestPostHeader from "./LatestPostHeader";
-import LatestPostHeading from "./LatestPostHeader";
 
 const StyledWrapper = styled.div`
   display: flex;

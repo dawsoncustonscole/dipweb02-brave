@@ -2,6 +2,7 @@ import React from "react";
 import { connect, css, Global } from "frontity";
 import Switch from "@frontity/components/switch";
 import HomeScreen from "../screens/HomeScreen";
+import PageScreen from "../screens/PageSceen";
 import Navigation from "./Navigation/Navigation";
 import Footer from "./Footer/Footer";
 
@@ -36,6 +37,7 @@ function Root(props) {
       <main>
         <Switch>
           <HomeScreen when={data.isHome} />
+          <PageScreen when={data.isPage} />
         </Switch>
       </main>
       <Footer navigationItems={navigationItems} />
