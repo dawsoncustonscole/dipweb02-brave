@@ -14,6 +14,10 @@ const StyledDiv = styled.div`
   justify-content: center;
   top: ${(props) => (props.navbarScroll ? "-10vh" : "0vh")};
   transition: top 300ms ease, background-color 200ms ease;
+
+  :hover {
+    background-color: black;
+  }
 `;
 
 const StyledContainer = styled.div`
