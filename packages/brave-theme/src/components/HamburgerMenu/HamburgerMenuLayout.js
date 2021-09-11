@@ -13,11 +13,12 @@ const StyledWrapper = styled.div`
   overflow-y: scroll;
   -webkit-overflow-scrolling: touch; // mobile safari
   z-index: 400;
+  background-color: white;
 `;
 
 const StyledContainer = styled.div`
   width: 100%;
-  background-color: white;
+  height: 100%;
 `;
 
 function HamburgerMenuLayout(props) {
