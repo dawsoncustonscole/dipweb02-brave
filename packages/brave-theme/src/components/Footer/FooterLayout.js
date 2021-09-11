@@ -14,7 +14,7 @@ const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-  gap: 8rem;
+  gap: 10rem;
   padding-top: 4rem;
   padding-bottom: 1.5rem;
 
