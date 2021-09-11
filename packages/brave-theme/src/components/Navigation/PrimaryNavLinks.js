@@ -7,7 +7,7 @@ const StyledDiv = styled.div`
   display: flex;
   gap: 32px;
 
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: none;
   }
 `;

@@ -1,5 +1,5 @@
 import { styled } from "frontity";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import Brand from "./Brand";
 import PrimaryNavLinks from "./PrimaryNavLinks";
 
@@ -8,9 +8,12 @@ const StyledDiv = styled.div`
   z-index: 400;
   width: 100%;
   color: white;
-  background-color: rgba(54, 54, 54, 0.5);
+  background-color: ${(props) =>
+    props.navbarBackground ? "rgba(0, 0, 0, 0.2)" : "transparent"};
   display: flex;
   justify-content: center;
+  top: ${(props) => (props.navbarScroll ? "-10vh" : "0vh")};
+  transition: top 300ms ease, background-color 200ms ease;
 `;
 
 const StyledContainer = styled.div`
@@ -18,7 +21,7 @@ const StyledContainer = styled.div`
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 12.5vh;
+  height: 10vh;
 
   @media (max-width: 1024px) {
     width: 80vw;
@@ -30,8 +33,41 @@ const StyledContainer = styled.div`
 `;
 
 function NavigationLayout() {
+  const [navbarScroll, setNavbarScroll] = useState(false);
+  const [navbarBackground, setNavbarBackground] = useState(false);
+
+  useEffect(() => {
+    window.addEventListener("scroll", scrollNavBar);
+
+    return () => window.removeEventListener("scroll", scrollNavBar);
+  }, []);
+
+  let prevScrollPos = window.scrollY;
+
+  function scrollNavBar() {
+    let currentScrollPos = window.scrollY;
+
+    if (currentScrollPos > 100) {
+      setNavbarBackground(true);
+    } else if (currentScrollPos < 100) {
+      setNavbarBackground(false);
+    }
+
+    if (currentScrollPos > prevScrollPos && currentScrollPos > 400) {
+      setNavbarScroll(true);
+    } else if (currentScrollPos < prevScrollPos) {
+      setNavbarScroll(false);
+    }
+
+    // currentScrollPos > prevScrollPos
+    //   ? setNavbarScroll(true)
+    //   : setNavbarScroll(false);
+
+    prevScrollPos = currentScrollPos;
+  }
+
   return (
-    <StyledDiv>
+    <StyledDiv navbarScroll={navbarScroll} navbarBackground={navbarBackground}>
       <StyledContainer>
         <Brand />
         <PrimaryNavLinks />

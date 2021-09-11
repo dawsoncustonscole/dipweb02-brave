@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   display: flex;
   height: 80vh;
 
-  @media (max-width: 375px) {
+  @media (max-width: 425px) {
     height: 110vh;
   }
 `;

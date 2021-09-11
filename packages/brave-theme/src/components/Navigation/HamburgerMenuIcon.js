@@ -7,7 +7,7 @@ import React from "react";
 
 const StyledDiv = styled.div`
   display: none;
-  @media (max-width: 768px) {
+  @media (max-width: 1024px) {
     display: block;
   }
 
