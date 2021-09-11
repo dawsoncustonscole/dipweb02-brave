@@ -6,19 +6,26 @@ import React from "react";
 // TODO put this into a container with large hit space
 
 const StyledDiv = styled.div`
+  align-items: center;
   display: none;
-  @media (max-width: 1024px) {
-    display: block;
+  width: 3rem;
+  justify-content: center;
+  height: 50%;
+  border-radius: 0.5rem;
+  :hover {
+    background-color: rgba(255, 255, 255, 0.2);
+    cursor: pointer;
   }
 
-  @media (max-width: 425px) {
-    margin-right: 8px;
+  @media (max-width: 1024px) {
+    display: flex;
   }
 `;
 
-function HamburgerMenuIcon() {
+function HamburgerMenuIcon(props) {
+  const { onClick } = props;
   return (
-    <StyledDiv>
+    <StyledDiv onClick={() => onClick()}>
       <FontAwesomeIcon icon={faBars} size="lg" />
     </StyledDiv>
   );

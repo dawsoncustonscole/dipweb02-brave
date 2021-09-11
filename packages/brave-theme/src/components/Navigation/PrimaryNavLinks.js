@@ -12,7 +12,8 @@ const StyledDiv = styled.div`
   }
 `;
 
-function PrimaryNavLinks() {
+function PrimaryNavLinks(props) {
+  const { toggleHamburgerMenu } = props;
   return (
     <>
       <StyledDiv>
@@ -21,7 +22,7 @@ function PrimaryNavLinks() {
         <NavLinkP>Get Involved</NavLinkP>
         <NavLinkP>Resources</NavLinkP>
       </StyledDiv>
-      <HamburgerMenuIcon />
+      <HamburgerMenuIcon onClick={toggleHamburgerMenu} />
     </>
   );
 }

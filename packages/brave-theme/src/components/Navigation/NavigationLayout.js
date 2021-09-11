@@ -1,5 +1,6 @@
 import { styled } from "frontity";
 import React, { useState, useEffect } from "react";
+import HamburgerMenu from "../HamburgerMenu/HamburgerMenu";
 import Brand from "./Brand";
 import PrimaryNavLinks from "./PrimaryNavLinks";
 
@@ -36,7 +37,8 @@ const StyledContainer = styled.div`
   }
 `;
 
-function NavigationLayout() {
+function NavigationLayout(props) {
+  const { isHamburgerMenuOpen, toggleHamburgerMenu } = props;
   const [navbarScroll, setNavbarScroll] = useState(false);
   const [navbarBackground, setNavbarBackground] = useState(false);
 
@@ -73,12 +75,20 @@ function NavigationLayout() {
   }, []);
 
   return (
-    <StyledDiv navbarScroll={navbarScroll} navbarBackground={navbarBackground}>
-      <StyledContainer>
-        <Brand />
-        <PrimaryNavLinks />
-      </StyledContainer>
-    </StyledDiv>
+    <>
+      <StyledDiv
+        navbarScroll={navbarScroll}
+        navbarBackground={navbarBackground}
+      >
+        <StyledContainer>
+          <Brand />
+          <PrimaryNavLinks toggleHamburgerMenu={toggleHamburgerMenu} />
+        </StyledContainer>
+      </StyledDiv>
+      {isHamburgerMenuOpen && (
+        <HamburgerMenu toggleHamburgerMenu={toggleHamburgerMenu} />
+      )}
+    </>
   );
 }
 
