@@ -2,7 +2,7 @@ import React from "react";
 import { NavLinkP, P } from "../../Styles/Font";
 import { styled } from "frontity";
 import HamburgerMenuIcon from "./HamburgerMenuIcon";
-import Link from "@frontity/components/Link";
+import Link from "@frontity/components/link";
 
 const StyledDiv = styled.div`
   display: flex;
@@ -37,6 +37,7 @@ const StyledSubMenu = styled.div`
   width: 240px;
   text-align: left;
   padding: 2rem 0;
+
   ${StyledNavItem}:hover & {
     display: flex;
   }

@@ -2,7 +2,7 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "frontity";
 import React from "react";
-import { BrandH4, H6, H7, NavLinkP } from "../../Styles/Font";
+import { BrandH4, H7, NavLinkP } from "../../Styles/Font";
 import Link from "@frontity/components/link";
 
 const StyledWrapper = styled.div`
