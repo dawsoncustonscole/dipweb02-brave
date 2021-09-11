@@ -38,6 +38,7 @@ function HamburgerMenuLayout(props) {
               key={index}
               style={{ textDecoration: "none", color: "black" }}
               link={child.href}
+              onClick={() => onHamburgerMenuClose()}
             >
               <NavLinkP>{child.name}</NavLinkP>
             </Link>
