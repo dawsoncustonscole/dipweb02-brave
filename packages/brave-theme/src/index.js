@@ -11,10 +11,16 @@ const braveTheme = {
     theme: Root,
   },
   state: {
-    theme: {},
+    theme: {
+      isHamburgerMenuOpen: false,
+    },
   },
   actions: {
-    theme: {},
+    theme: {
+      toggleHamburgerMenu: ({ state }) => {
+        state.theme.isHamburgerMenuOpen = !state.theme.isHamburgerMenuOpen;
+      },
+    },
   },
   libraries: {
     html2react: {
