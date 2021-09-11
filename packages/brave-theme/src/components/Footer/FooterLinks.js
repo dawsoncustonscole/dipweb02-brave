@@ -20,16 +20,17 @@ const StyledGrid = styled.div`
 `;
 
 function FooterLinks(props) {
-  const { footerLinks } = props;
+  const { navigationItems } = props;
 
   function renderFooterLinks(item, index) {
+    console.log(item);
     return (
       <div
         key={index}
         style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
       >
-        <H6>{item.title}</H6>
-        {item.menuItems.map((child, index) => {
+        <H6>{item.name}</H6>
+        {item.submenu.map((child, index) => {
           return (
             <Link
               key={index}
@@ -44,7 +45,7 @@ function FooterLinks(props) {
     );
   }
 
-  return <StyledGrid>{footerLinks.map(renderFooterLinks)}</StyledGrid>;
+  return <StyledGrid>{navigationItems.map(renderFooterLinks)}</StyledGrid>;
 }
 
 export default FooterLinks;

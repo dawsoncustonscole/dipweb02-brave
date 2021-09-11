@@ -6,9 +6,12 @@ import Navigation from "./Navigation/Navigation";
 import Footer from "./Footer/Footer";
 
 function Root(props) {
-  const { state, libraries } = props;
+  const { actions, state, libraries } = props;
 
   const data = state.source.get(state.router.link);
+  const toggleHamburgerMenu = actions.theme.toggleHamburgerMenu;
+  const isHamburgerMenuOpen = state.theme.isHamburgerMenuOpen;
+  const navigationItems = state.theme.menu;
 
   return (
     <>
@@ -25,13 +28,17 @@ function Root(props) {
           }
         `}
       />
-      <Navigation />
+      <Navigation
+        toggleHamburgerMenu={toggleHamburgerMenu}
+        isHamburgerMenuOpen={isHamburgerMenuOpen}
+        navigationItems={navigationItems}
+      />
       <main>
         <Switch>
           <HomeScreen when={data.isHome} />
         </Switch>
       </main>
-      <Footer />
+      <Footer navigationItems={navigationItems} />
     </>
   );
 }

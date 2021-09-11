@@ -1,12 +1,8 @@
 import React from "react";
-import { connect } from "frontity";
 import NavigationLayout from "./NavigationLayout";
 
 function Navigation(props) {
-  const { state, actions } = props;
-  const toggleHamburgerMenu = actions.theme.toggleHamburgerMenu;
-  const isHamburgerMenuOpen = state.theme.isHamburgerMenuOpen;
-  const navigationItems = state.theme.menu;
+  const { toggleHamburgerMenu, isHamburgerMenuOpen, navigationItems } = props;
 
   return (
     <NavigationLayout
@@ -17,4 +13,4 @@ function Navigation(props) {
   );
 }
 
-export default connect(Navigation);
+export default Navigation;

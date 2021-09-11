@@ -76,8 +76,9 @@ const footerLinks = [
   },
 ];
 
-function Footer() {
-  return <FooterLayout footerLinks={footerLinks} />;
+function Footer(props) {
+  const { navigationItems } = props;
+  return <FooterLayout navigationItems={navigationItems} />;
 }
 
 export default Footer;

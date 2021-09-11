@@ -32,11 +32,11 @@ const StyledContainer = styled.div`
   }
 `;
 function FooterLayout(props) {
-  const { footerLinks } = props;
+  const { navigationItems } = props;
   return (
     <StyledWrapper>
       <StyledContainer>
-        <FooterLinks footerLinks={footerLinks} />
+        <FooterLinks navigationItems={navigationItems} />
         <FooterCopyright />
       </StyledContainer>
     </StyledWrapper>

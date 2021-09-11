@@ -40,7 +40,6 @@ const StyledImage = styled.div`
 
 function BlogPostListing(props) {
   const { title, author, thumbnailSrc, publishDate, excerpt } = props;
-  console.log(title);
   return (
     <StyledDiv className="blogPostListing">
       <StyledContent>
