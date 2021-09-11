@@ -17,7 +17,7 @@ const StyledDiv = styled.div`
     cursor: pointer;
   }
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     display: flex;
   }
 `;

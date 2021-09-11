@@ -9,7 +9,7 @@ const StyledDiv = styled.div`
   height: 100%;
   align-items: center;
 
-  @media (max-width: 1024px) {
+  @media (max-width: 768px) {
     display: none;
   }
 `;
