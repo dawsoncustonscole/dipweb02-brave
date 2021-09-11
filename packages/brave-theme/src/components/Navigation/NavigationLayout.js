@@ -36,35 +36,37 @@ function NavigationLayout() {
   const [navbarScroll, setNavbarScroll] = useState(false);
   const [navbarBackground, setNavbarBackground] = useState(false);
 
+  //  TODO move scroll logic into Navigation.js
+
   useEffect(() => {
-    window.addEventListener("scroll", scrollNavBar);
+    let prevScrollPos = window.scrollY;
 
-    return () => window.removeEventListener("scroll", scrollNavBar);
+    function onScroll() {
+      let currentScrollPos = window.scrollY;
+
+      if (currentScrollPos > 100) {
+        setNavbarBackground(true);
+      } else {
+        setNavbarBackground(false);
+      }
+
+      if (currentScrollPos > 300) {
+        setNavbarScroll(true);
+      } else {
+        setNavbarScroll(false);
+      }
+
+      if (currentScrollPos < prevScrollPos) {
+        setNavbarScroll(false);
+      }
+
+      prevScrollPos = currentScrollPos;
+    }
+
+    window.addEventListener("scroll", onScroll);
+
+    return () => window.removeEventListener("scroll", onScroll);
   }, []);
-
-  let prevScrollPos = window.scrollY;
-
-  function scrollNavBar() {
-    let currentScrollPos = window.scrollY;
-
-    if (currentScrollPos > 100) {
-      setNavbarBackground(true);
-    } else if (currentScrollPos < 100) {
-      setNavbarBackground(false);
-    }
-
-    if (currentScrollPos > prevScrollPos && currentScrollPos > 400) {
-      setNavbarScroll(true);
-    } else if (currentScrollPos < prevScrollPos) {
-      setNavbarScroll(false);
-    }
-
-    // currentScrollPos > prevScrollPos
-    //   ? setNavbarScroll(true)
-    //   : setNavbarScroll(false);
-
-    prevScrollPos = currentScrollPos;
-  }
 
   return (
     <StyledDiv navbarScroll={navbarScroll} navbarBackground={navbarBackground}>
