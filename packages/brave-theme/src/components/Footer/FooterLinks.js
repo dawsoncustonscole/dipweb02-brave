@@ -23,7 +23,6 @@ function FooterLinks(props) {
   const { navigationItems } = props;
 
   function renderFooterLinks(item, index) {
-    console.log(item);
     return (
       <div
         key={index}

@@ -2,7 +2,8 @@ import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { styled } from "frontity";
 import React from "react";
-import { BrandH4, H6, NavLinkP } from "../../Styles/Font";
+import { BrandH4, H6, H7, NavLinkP } from "../../Styles/Font";
+import Link from "@frontity/components/link";
 
 const StyledWrapper = styled.div`
   position: fixed;
@@ -22,7 +23,30 @@ const StyledContainer = styled.div`
 `;
 
 function HamburgerMenuLayout(props) {
-  const { onHamburgerMenuClose } = props;
+  const { navigationItems, onHamburgerMenuClose } = props;
+
+  function renderMenuSection(item, index) {
+    return (
+      <div
+        key={index}
+        style={{ display: "flex", flexDirection: "column", gap: "1rem" }}
+      >
+        <H7>{item.name}</H7>
+        {item.submenu.map((child, index) => {
+          return (
+            <Link
+              key={index}
+              style={{ textDecoration: "none", color: "black" }}
+              link={child.href}
+            >
+              <NavLinkP>{child.name}</NavLinkP>
+            </Link>
+          );
+        })}
+      </div>
+    );
+  }
+
   return (
     <StyledWrapper>
       <StyledContainer>
@@ -50,75 +74,20 @@ function HamburgerMenuLayout(props) {
             <FontAwesomeIcon icon={faTimes} size="lg" />
           </div>
         </div>
-        <div className="menu-body" style={{ padding: "1rem 5vw" }}>
-          <div className="menusection">
-            <H6>Tools</H6>
-            <div
-              className="nav-items"
-              style={{
-                marginTop: "1rem",
-                marginBottom: "2rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-              }}
-            >
-              <NavLinkP>The brave app</NavLinkP>
-              <NavLinkP>ODetect sensors</NavLinkP>
-              <NavLinkP>Brave buttons</NavLinkP>
-            </div>
-          </div>
-          <div className="menusection">
-            <H6>About us</H6>
-            <div
-              className="nav-items"
-              style={{
-                marginTop: "1rem",
-                marginBottom: "2rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-              }}
-            >
-              <NavLinkP>The brave app</NavLinkP>
-              <NavLinkP>ODetect sensors</NavLinkP>
-              <NavLinkP>Brave buttons</NavLinkP>
-            </div>
-          </div>
-          <div className="menusection">
-            <H6>Resources</H6>
-            <div
-              className="nav-items"
-              style={{
-                marginTop: "1rem",
-                marginBottom: "2rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-              }}
-            >
-              <NavLinkP>The brave app</NavLinkP>
-              <NavLinkP>ODetect sensors</NavLinkP>
-              <NavLinkP>Brave buttons</NavLinkP>
-            </div>
-          </div>
-          <div className="menusection">
-            <H6>Resources</H6>
-            <div
-              className="nav-items"
-              style={{
-                marginTop: "1rem",
-                marginBottom: "2rem",
-                display: "flex",
-                flexDirection: "column",
-                gap: "0.5rem",
-              }}
-            >
-              <NavLinkP>The brave app</NavLinkP>
-              <NavLinkP>ODetect sensors</NavLinkP>
-              <NavLinkP>Brave buttons</NavLinkP>
-            </div>
-          </div>
+
+        <div
+          className="menu-body"
+          style={{
+            display: "flex",
+            flexDirection: "column",
+            gap: "3rem",
+            paddingTop: "1.5rem",
+            paddingRight: "5vw",
+            paddingBottom: "4rem",
+            paddingLeft: "5vw",
+          }}
+        >
+          {navigationItems.map(renderMenuSection)}
         </div>
       </StyledContainer>
     </StyledWrapper>

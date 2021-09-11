@@ -89,7 +89,10 @@ function NavigationLayout(props) {
         </StyledContainer>
       </StyledDiv>
       {isHamburgerMenuOpen && (
-        <HamburgerMenu toggleHamburgerMenu={toggleHamburgerMenu} />
+        <HamburgerMenu
+          navigationItems={navigationItems}
+          toggleHamburgerMenu={toggleHamburgerMenu}
+        />
       )}
     </>
   );

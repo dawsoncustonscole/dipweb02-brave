@@ -52,6 +52,12 @@ export const H6 = styled.h6`
   margin: 0;
 `;
 
+export const H7 = styled.h6`
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin: 0;
+`;
+
 export const FeaturedText = styled.p`
   font-size: 1.5rem;
   line-height: 150%;
