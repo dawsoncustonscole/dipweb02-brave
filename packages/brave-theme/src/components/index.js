@@ -3,6 +3,7 @@ import { connect, css, Global } from "frontity";
 import Switch from "@frontity/components/switch";
 import HomeScreen from "../screens/HomeScreen";
 import Navigation from "./Navigation/Navigation";
+import Footer from "./Footer/Footer";
 
 function Root(props) {
   const { state, libraries } = props;
@@ -30,6 +31,7 @@ function Root(props) {
           <HomeScreen when={data.isHome} />
         </Switch>
       </main>
+      <Footer />
     </>
   );
 }
