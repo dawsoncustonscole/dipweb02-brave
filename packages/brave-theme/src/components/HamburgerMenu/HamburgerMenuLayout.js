@@ -1,6 +1,6 @@
 import { faTimes } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { styled } from "frontity";
+import { Global, styled } from "frontity";
 import React from "react";
 import { BrandH4, H7, NavLinkP } from "../../Styles/Font";
 import Link from "@frontity/components/link";
@@ -51,6 +51,7 @@ function HamburgerMenuLayout(props) {
   return (
     <StyledWrapper>
       <StyledContainer>
+        <Global styles={{ body: { overflowY: "hidden" } }} />
         <div
           className="header"
           style={{
