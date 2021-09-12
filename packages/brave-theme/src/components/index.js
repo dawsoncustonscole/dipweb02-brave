@@ -27,6 +27,11 @@ function Root(props) {
           body {
             margin: 0;
           }
+
+          p {
+            font-size: 21px;
+            line-height: 150%;
+          }
         `}
       />
       <Navigation

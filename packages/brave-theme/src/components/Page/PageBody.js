@@ -7,7 +7,7 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledContainer = styled.div`
-  padding: 8rem 0;
+  padding: 3rem 0;
   width: 60vw;
 
   @media (max-width: 1024px) {
@@ -15,7 +15,7 @@ const StyledContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-top: 5rem;
+    padding-top: 3rem;
     padding-bottom: 3rem;
     width: 90vw;
   }

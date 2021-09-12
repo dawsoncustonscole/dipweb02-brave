@@ -23,7 +23,7 @@ function FooterCopyright() {
     <StyledDiv>
       <H4 style={{ lineHeight: "100%" }}>Brave</H4>
       <div style={{ flexGrow: 1, textAlign: "center" }}>
-        <p style={{ margin: 0, lineHeight: "150%" }}>
+        <p style={{ fontSize: "1rem", margin: 0, lineHeight: "150%" }}>
           <strong>© 2021 Brave Technology Coop</strong> - All Rights Reserved
         </p>
       </div>

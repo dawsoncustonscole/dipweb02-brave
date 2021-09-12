@@ -12,7 +12,8 @@ const StyledWrapper = styled.div`
 `;
 
 const StyledContainer = styled.div`
-  padding: 8rem 0;
+  padding-top: 15rem;
+  padding-bottom: 3rem;
   width: 60vw;
 
   @media (max-width: 1024px) {
@@ -20,8 +21,8 @@ const StyledContainer = styled.div`
   }
 
   @media (max-width: 768px) {
-    padding-top: 5rem;
-    padding-bottom: 3rem;
+    padding-top: 10rem;
+    padding-bottom: 2rem;
     width: 90vw;
   }
 `;
